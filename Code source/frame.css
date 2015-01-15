@@ -1,0 +1,268 @@
+/*************************** REMOVE ***********************/
+
+input#sure
+{
+	float:left;
+	height:30px;
+	width:30px;
+	background: url('images/sure_done.png') no-repeat;
+	
+	text-indent:-1000em;
+	border:0px;
+	
+	
+
+}
+
+
+a#send_mini2
+{
+	float:right;
+	height:30px;
+	width:35px;
+	background: url('images/replay2.png') no-repeat;
+	margin-left:0px;
+	margin-right:10px;
+	text-indent:-1000em;
+	display:block;
+	margin-top:5px;
+	
+	
+
+}
+
+a#send_mini2:hover
+{
+background: url('images/replay2_hard.png') no-repeat;
+} 
+
+input#sure:hover
+{
+background: url('images/sure_done_hard.png') no-repeat;
+}
+
+
+input#delet_done
+{
+	float:right;
+	height:30px;
+	width:30px;
+	background: url('images/remove_done.png') no-repeat;
+	
+	text-indent:-1000em;
+	border:0px;
+	
+	
+
+}
+
+input#delet_done:hover
+{
+background: url('images/remove_done_hard.png') no-repeat;
+}
+
+
+
+/******************* dellet *************/
+input#sure_detail
+{
+	float:left;
+	height:20px;
+	width:20px;
+	background: url('images/sure_done_detail.png') no-repeat;
+	
+	text-indent:-1000em;
+	border:0px;
+	cursor:pointer;
+	
+	
+
+}
+
+input#sure_detail:hover
+{
+background: url('images/sure_done_detail_hard.png') no-repeat;
+}
+
+
+input#delet_done_detail
+{
+	float:right;
+	height:20px;
+	width:20px;
+	background: url('images/remove_done_detail.png') no-repeat;
+	
+	text-indent:-1000em;
+	border:0px;
+	cursor:pointer;
+	
+	
+
+}
+
+input#delet_done_detail:hover
+{
+background: url('images/remove_done_detail_hard.png') no-repeat;
+}
+
+
+/******************** SEARCH body ***********************/
+table
+{
+
+margin-top:30px;
+width:940px;
+
+
+}
+ tr.none
+{
+background :#ccc;
+
+}
+table.search_body tr td a
+{
+	color:#F80B0B;
+}
+table.search_body tr td
+{
+	font-family:"Comic Sans MS", "Trebuchet MS", sans-serif;
+	border:1px solid #FFC64A;
+	border-collapse: collapse;
+	font-size:0.85em;
+	text-align:center;
+	
+	
+}
+
+table.search_body  tr:hover , table.search_body  tr:hover a
+{
+	background:#B20000;
+	color:#fff;
+}
+
+table.search_body tr.th:hover , table.search_body tr.th:hover a
+{
+background:#FFC64A;
+}
+table.search_body th
+{
+font-size:1.2em;
+		font-family:"Comic Sans MS", "Trebuchet MS", sans-serif;
+		background:#FFC64A;
+		color:#fff;
+		
+		text-align:center;
+		margin-bottom:5px;
+}
+
+table.search_body th a
+{
+	color:#fff;
+	
+}
+
+table.search_body th a img
+{
+	margin-bottom:-5px;
+	margin-left:20px;
+	border:0px;
+}
+
+table.search_body tr a.none
+{
+	margin-left:30px;
+	width:30px;
+	height:30px;
+	background : url('images/no_seen.png');
+	float:left;
+	text-indent:-1000em;
+	display : block;
+	
+}
+
+
+table.search_body tr:hover a.none
+{
+	width:30px;
+	height:30px;
+	background : url('images/no_seen_hard.png');
+}
+
+table.search_body tr a.seen
+{
+	margin-left:30px;
+	width:30px;
+	height:30px;
+	background : url('images/seen.png');
+	float:left;
+	text-indent:-1000em;
+	display : block;
+	
+}
+
+
+table.search_body tr:hover a.seen
+{
+	width:30px;
+	height:30px;
+	background : url('images/seen_hard.png');
+}
+
+table.search_body tr a.rejected
+{
+	margin-left:30px;
+	width:30px;
+	height:30px;
+	background : url('images/rejected.png');
+	float:left;
+	text-indent:-1000em;
+	display : block;
+	
+}
+
+
+table.search_body tr:hover a.rejected
+{
+	width:30px;
+	height:30px;
+	background : url('images/rejected_hard.png');
+}
+img
+{
+
+vertical-align:middle;
+}
+
+table.search_body tr a.accepted
+{
+	margin-left:30px;
+	width:30px;
+	height:30px;
+	background : url('images/accepted.png');
+	float:left;
+	text-indent:-1000em;
+	display : block;
+	
+}
+
+
+table.search_body tr:hover a.accepted
+{
+	width:30px;
+	height:30px;
+	background : url('images/accepted_hard.png');
+}
+
+
+table.search_body td.name_item
+{
+	text-align:left;
+	padding-left:20px;
+
+}
+
+table.search_body td.name_item img
+{
+	margin-right:10px;
+}

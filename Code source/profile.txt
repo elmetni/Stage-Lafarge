@@ -1,0 +1,90 @@
+<?php session_start();
+
+			if(!isset($_SESSION['loged']) or $_SESSION['loged']!=1 )
+				{
+						header('location:login.php');
+				
+				
+				}
+				
+		
+			try
+			{
+				$db=new PDO('mysql:host='.$_SERVER['HTTP_HOST'].';dbname=intervention','root','');
+			}
+			catch(exception $e)
+			{
+				die('Error :'.$e->getmessage());
+			}
+		$R_user=$db->prepare('SELECT * FROM user WHERE id_user=:id');
+		$R_user->execute(array(
+							'id'=>$_SESSION['id']
+							));
+		$D_user=$R_user->fetch();
+		
+		if($D_user['statue_account']=="disable" OR $D_user==false)
+		{
+				session_destroy();
+				header('location:login.php');
+		}
+		
+		
+
+	
+	
+		
+		if(isset($_POST['logout']))
+			{
+		session_destroy();
+		setcookie('login', $d['login'], $time -60*60*24*7,null, null,false,true);
+		setcookie('password', $d['password'], $time -60*60*24*7,null, null,false,true);
+		header('location:login.php');
+
+			}
+		if($D_user['type_account']!="user")
+		header('location:administration.php');
+
+?>
+
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//en"
+
+       "http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+
+<html>
+		<head> 
+				<?php echo'<title> </title>';?>
+				<link href="style.css" rel="stylesheet" type="text/css" media="screen" >
+		</head>
+		
+		<body>
+		<div id="all" >
+		<div id="header">
+		
+		</div> <!---------------- header -------------------->
+
+		<ul class="menu">
+		
+				<li><a href="home.php?go=send" class="here" > Rédiger Demande</a></li>
+				<li><a href="home.php?go=follow"> Suiver Demande</a></li>
+				<li><a href="home.php?go=message"> Messages</a></li>
+				<li><a href="home.php?go=profile"> Profil</a></li>		
+		</ul>
+	
+	<br><br><br>
+	
+		<p class="clear"></p>
+		
+		
+			</div><!-----------  ALL ---------------->
+			
+			<div id="bottom">
+		
+		</div> <!---------------- header -------------------->
+			
+		</body>
+		
+</html>
